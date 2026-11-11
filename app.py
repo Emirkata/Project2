@@ -23,9 +23,7 @@ def load_model():
         X = digits.images.reshape((len(digits.images), -1)) / 16.0
         y = digits.target
 
-        X_train, _, y_train, _ = train_test_split(
-            X, y, test_size=0.2, random_state=42
-        )
+        X_train, _, y_train, _ = train_test_split(X, y, test_size=0.2, random_state=42)
 
         model = MLPClassifier(
             hidden_layer_sizes=(100,),
